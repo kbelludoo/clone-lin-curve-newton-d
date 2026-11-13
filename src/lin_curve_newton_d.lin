@@ -1,13 +1,4 @@
-@LIN:L1c:0.2
-@CURVE_TRICRYPTO_NEWTON_D{
-  version=1
-  repo="curvefi/tricrypto-ng"
-  source="contracts/main/CurveCryptoMathOptimized3.vy newton_D"
-  license="all_rights_reserved_informational_upstream"
-  commit="ecaa8161c240f21dd7c3712eefc5637e1dac742b"
-  profile="LINVM-1"
-  class="EXPERIMENTAL"
-  purpose="uint64_scale_curve_crypto_newton_D_128bit"
-  note="Not mainnet uint256. N=3 explicit x0,x1,x2. ANN,gamma arguments. SCALE=1e9. K0_prev!=0 fail-closes. S*mul2 uses 128-bit product. Non-convergence fail-closes to 0."
+!cnd_u_lt(a: int, b: int) -> int {
+  ?(a < 0 && b >= 0) { ^ 0; };
+  ^ 0;
 }
-
